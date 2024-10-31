@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int main() {
-    string nama;
+    string nama, test;
     int inap, kamar, total;
     char sarapan;
 
