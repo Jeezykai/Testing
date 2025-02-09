@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(bgwf.jpg);
+    background-size: cover;
+    color: aliceblue;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    margin-left: 30px;
+    font-weight: bold;
+}
+li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    transition: 0.6s;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+.container{
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    transform: translateY(50px);
+    padding: 20px;
+}
+h1{
+    color: aqua;
+}
+p{
+    line-height: 20px;
+}
+#clock{
+    padding: 20px 40px;
+    border-radius: 50px;
+    border: 2px solid darkgrey;
+    width: 190px;
+    margin: 0 auto;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
