@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            text-align: center;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: auto;
+            position: relative;
+            z-index: 10;
+        }
+        button {
+            background-color: #ff4b5c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #e04352;
+        }
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            transform: rotate(-45deg);
+            animation: float 5s infinite ease-in-out;
+            opacity: 0.5;
+            z-index: 1;
+        }
+        .heart:before, .heart:after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .heart:before {
+            top: -10px;
+            left: 0;
+        }
+        .heart:after {
+            left: 10px;
+            top: 0;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) rotate(-45deg); }
+            50% { transform: translateY(-100px) rotate(-45deg); }
+            100% { transform: translateY(0) rotate(-45deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="quiz-container">
+        <h2>Valentine Quiz</h2>
+        <p id="question"></p>
+        <div id="options"></div>
+        <button onclick="nextQuestion()">Next</button>
+    </div>
+    <h3 id="time-elapsed"></h3>
+    <script>
+        function createHearts() {
+            for (let i = 0; i < 20; i++) {
+                let heart = document.createElement("div");
+                heart.className = "heart";
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 5000);
+            }
+        }
+        setInterval(createHearts, 500);
+
+        const questions = [
+            { q: "Do you love chocolates?", options: ["Yes", "No"] },
+            { q: "Would you go on a romantic date?", options: ["Absolutely", "Maybe", "No"] },
+            { q: "What's your favorite Valentine color?", options: ["Red", "Pink", "White", "Other"] }
+        ];
+
+        let currentQuestion = 0;
+        let answers = [];
+
+        function showQuestion() {
+            if (currentQuestion < questions.length) {
+                document.getElementById("question").innerText = questions[currentQuestion].q;
+                const optionsContainer = document.getElementById("options");
+                optionsContainer.innerHTML = "";
+                questions[currentQuestion].options.forEach(option => {
+                    const button = document.createElement("button");
+                    button.innerText = option;
+                    button.onclick = () => saveAnswer(option);
+                    optionsContainer.appendChild(button);
+                });
+            } else {
+                showResults();
+            }
+        }
+
+        function saveAnswer(answer) {
+            answers.push(answer);
+            currentQuestion++;
+            showQuestion();
+        }
+
+        function showResults() {
+            const startDate = new Date("2024-08-17");
+            function updateTimer() {
+                const today = new Date();
+                const diffTime = today - startDate;
+                const days = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diffTime / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((diffTime / (1000 * 60)) % 60);
+                const seconds = Math.floor((diffTime / 1000) % 60);
+                document.getElementById("time-elapsed").innerText = 
+                    `Time Passed Since August 17, 2024: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+            }
+            setInterval(updateTimer, 1000);
+            updateTimer();
+            document.getElementById("quiz-container").innerHTML = `
+                <h2>Your Answers</h2>
+                <p>${answers.join("<br>")}</p>
+                <h3 id="time-elapsed"></h3>
+            `;
+        }
+
+        showQuestion();
+    </script>
+</body>
+</html>
