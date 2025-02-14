@@ -11,7 +11,6 @@
     --gaya-font2:'Ubuntu',sans-serif;
     --gaya-font3:'Dancing Script',sans-serif;
 }
-
 @keyframes fanim{
     0%{background-position:0% 0%}25%
     {background-position:100% 100%}50%
@@ -19,7 +18,6 @@
     {background-position:50% 50%}100%
     {background-position:0% 0%}
 }
-
 body{
     background-color:#000;
     font-family:var(--gaya-font);
@@ -28,13 +26,11 @@ body{
     -ms-user-select:none;
     user-select:none;
 }
-
 a{
     text-decoration:none;
 }
-
 body::before{
-    content:"\00A9 HelloCapy - BéLinNguyễn";
+    content:"\00A9 Jayy";
     color:white;opacity:0.7;
     font-size:10px;
     position:fixed;
@@ -42,7 +38,6 @@ body::before{
     right:25px;
     z-index:150
 }
-
 #bodyblur{
     opacity:1;
     position:fixed;
@@ -53,7 +48,6 @@ body::before{
     background:rgba(0,0,0,0.3);
     transition:all 1s ease
 }
-
 #wallpaper{
     position:fixed;
     top:0;
@@ -64,57 +58,48 @@ body::before{
     z-index:-1;
     transition:all 1.3s ease
 }
-
 #beneranblur{
     position:fixed;
     top:0;
     left:0;
     right:0;
     bottom:0;
-    background:rgba(0,0,0,0.3);
+    background:linear-gradient(to right, #ff758c, #ffffff);
     -webkit-backdrop-filter:blur(0px);
     backdrop-filter:blur(0px);
     transition:all 3s ease
 }
-
 @keyframes jj{
     0%{transform:scale(1.1)}50%
     {transform:scale(1.2)}100%
     {transform:scale(1.1)}
 }
-
 @keyframes rts{
     from{transform:scale(.1)}
     to{transform:scale(1)}
 }
-
 @keyframes rto{
     from{transform:scale(1)}
     to{transform:scale(1.1)}
 }
-
 @keyframes aniopa{
     0%{transform:scale(1)}
     50%{transform:scale(.75)}
     100%{transform:scale(1)}
 }
-
 @keyframes rtf{
     from{transform:rotate(0deg)}
     to{transform:rotate(360deg)}
 }
-
 @keyframes rt{
     from{transform:scale(.9)}
     to{transform:scale(1)}
 }
-
 @keyframes kont{
     0%{left:-1px;top:-3px}
     50%{left:1px;top:3px}
     100%{left:-1px;top:-3px}
 }
-
 blockquote{
     position:absolute;
     opacity:0;
@@ -130,14 +115,12 @@ blockquote{
     color:var(--warna-teks);
     text-shadow:0 2px 2px rgba(0,0,0,.8)
 }
-
 blockquote{
     width:400px;
     text-align:center;
     line-height:1.3em;
     padding:10px 20px
 }
-
 blockquote::before{
     content:"";
     position:absolute;
@@ -148,14 +131,12 @@ blockquote::before{
     left:-8px;
     right:-8px;
 }
-
 blockquote p{
     font-size:18px;
     font-weight:700;
     line-height:1.4em;
     transition:all .5s ease;
 }
-
 blockquote #kalimat2{
     font-size:16px;
     font-weight:400;
@@ -168,7 +149,6 @@ blockquote #kalimatbawah{
     font-size:22px;
     font-weight:700;
 }
-
 #Tombol{
     position:relative;
     opacity:0;
@@ -179,7 +159,6 @@ blockquote #kalimatbawah{
     transform:scale(.1);
     transition:all 1s ease;
 }
-
 #Tombol a{
     cursor:pointer;
     display:inline-flex;
@@ -202,7 +181,6 @@ blockquote #kalimatbawah{
     box-shadow:rgba(255,255,255,0.3) 0 7px 29px 0;
     z-index:1;
 }
-
 #Content{
     animation-name:none;
     animation-duration:3s;
@@ -214,7 +192,6 @@ blockquote #kalimatbawah{
     height:180px;
     transition:all .7s ease;
 }
-
 #Content > *{
     display:flex;
     align-items:center;
@@ -222,7 +199,6 @@ blockquote #kalimatbawah{
     justify-content:center;
     margin-top:1px;
 }
-
 .kumpulanstiker > img{
     display:none;
     box-shadow:rgba(255,255,255,0.3) 0 7px 29px 0;
@@ -233,19 +209,16 @@ blockquote #kalimatbawah{
     height:90px;
     margin:20px 0;
 }
-
 #stiker{
     opacity:.1;
     transition:all 1.2s ease;
     transform:scale(.1);
 }
-
 #halo{
     font-size:18px;
     position:relative;
     margin:15px 0 30px 0;
 }
-
 #fotolove img{
     transition:all .5s ease;
     width:75px;
@@ -253,7 +226,6 @@ blockquote #kalimatbawah{
     padding:0;
     background:none;
 }
-
 #suratin img{
     display:inline-flex;
     background:rgba(255,255,255,0);
@@ -264,19 +236,16 @@ blockquote #kalimatbawah{
     animation:rto .7s infinite alternate;
     transition:all .3s ease;
 }
-
 #ket,#halo{
     text-shadow:0 2px 2px rgba(0,0,0,.8);
     font-size:17px;
     font-weight:700;
     color:white;
 }
-
 #ket{
     margin-top:15px;
     font-weight:400;
 }
-
 #kolombaru{
     position:absolute;
     opacity:0;
@@ -287,37 +256,31 @@ blockquote #kalimatbawah{
     text-align:center;
     justify-content:center;
 }
-
 #kolombaru > li{
     margin:10px;
     padding:10px;
     list-style-type:none;
 }
-
 #kolombaru li img{
     display:flex;
     width:40px;
     height:40px
 }
-
 #kolombaru li img:hover{
     transform:scale(1.15);
     transition:all .3s ease
 }
-
 .swal2-modal > *{
     font-size:16px;
     font-family:var(--gaya-font2);
     color:white
 }
-
 .swal2-title{
     line-height:1.3em;
     font-size:18px;
     text-align:center;
     padding:15px 30px 0 30px
 }
-
 .swal2-timer-progress-bar-container > *{
     opacity:.7;
     background:#00B6FF;
@@ -395,4 +358,13 @@ svg.line{
 @keyframes spin{
     from{transform:rotate(20deg)}
     to{transform:rotate(-20deg)}
+}
+#time-elapsed {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+#time-elapsed.show {
+    opacity: 1;
+    transform: translateY(0);
 }

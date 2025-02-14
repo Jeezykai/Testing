@@ -3,28 +3,27 @@ async function pesanAwal() {
     suratin.style = "display:none";
     ket.style = "display:none";
     await swalst.fire({
-        title: 'Chào cục cưngg! ❤️',
+        title: 'Haii!',
         imageUrl: '' + stiker1.src,
     });
     await swalst.fire({
-        title: 'Tớ chỉ muốn nói 😍',
+        title: 'Aku mau ngasih sesuatu',
         imageUrl: '' + stiker2.src,
     });
     await swalst.fire({
-        title: 'Tuyệt sắc giai nhân phải yêuu taa 🤭❤️',
+        title: 'Tapi aku gatau kamu suka atau engga',
         imageUrl: '' + stiker3.src,
     });
     await swalst.fire({
-        title: 'Valentine để ta ôm 🥺❤️',
+        title: 'Semoga kamu suka yaa',
         imageUrl: '' + stiker4.src,
     });
     await swalst.fire({
-        title: 'Valentine làmm vkiu tuii nhaa 😘💕',
+        title: 'Walaupun mungkin agak kurang bagus hehe ^-^',
         imageUrl: '' + stiker5.src,
     });
     mulaikonten();
 }
-
 ftom = 0;
 aksift = 0;
 ftganti = 0;
@@ -39,7 +38,6 @@ var ahalo = 0,
     vketikhalo;
 pesanwhatsapp = pesanWA.innerHTML;
 Content.style = "opacity:1;margin-top:16vh;";
-
 function memulai() {
     if (fungsiAwal == 0) {
         audio.play();
@@ -50,7 +48,6 @@ function memulai() {
         setTimeout(pesanAwal, 700);
     }
 }
-
 async function mulaikonten() {
     Content.style = "opacity:1;margin-top:0";
     bodyblur.style = "opacity:.7";
@@ -59,7 +56,6 @@ async function mulaikonten() {
     setTimeout(ftmuncul, 200);
     setTimeout(kethalo, 500);
 }
-
 function kethalo() {
     if (ahalo < vketikhalo.length) {
         halo.innerHTML += vketikhalo.charAt(ahalo);
@@ -70,13 +66,11 @@ function kethalo() {
         setTimeout(bqmuncul, 200);
     }
 }
-
 function bqmuncul() {
     bq.style = "position:relative;opacity:1;visibility:visible;transform: scale(1);margin-top:0";
     mulaiketik1();
     fungsi = 1;
 }
-
 kal1 = kalimat.innerHTML;
 kalimat.innerHTML = "";
 var aa = 0,
@@ -97,7 +91,6 @@ kal2 = kalimat2.innerHTML;
 kalimat2.innerHTML = "";
 var aaa = 0,
     kal2;
-
 function mulaiketik2() {
     if (aaa < kal2.length) {
         kalimat2.innerHTML += kal2.charAt(aaa);
@@ -111,31 +104,26 @@ function mulaiketik2() {
     }
 }
 defkalimatbawah = kalimatbawah.innerHTML;
-
 function munculbwh() {
     kalimatbawah.innerHTML = defkalimatbawah;
-    setTimeout(munculbwh2, 2000);
+    setTimeout(munculbwh2, 1000);
     otomatis();
 }
-
 function munculbwh2() {
     kalimatbawah.innerHTML = kalimatbawah2.innerHTML;
-    setTimeout(munculbwh3, 2000);
+    setTimeout(munculbwh3, 1000);
     otomatis();
 }
-
 function munculbwh3() {
     kalimatbawah.innerHTML = kalimatbawah3.innerHTML;
-    setTimeout(munculbwh, 2000);
+    setTimeout(munculbwh, 1000);
     otomatis();
 }
-
 function ftaksi() {
     if (aksift == 1) {
         aksift = 0;
     }
 }
-
 function ftmuncul() {
     if (ftganti == 0) {
         stiker.style = "display:inline-flex;opacity:1;transform:scale(1)";
@@ -145,26 +133,21 @@ function ftmuncul() {
         stiker.style = "display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";
     }
 }
-
 function fthilang() {
     stiker.style = "display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(.1)";
 }
-
 function tombol() {
     ftom = 1;
     Tombol.style = "opacity:1;transform: scale(1);";
 }
-
 function multifungsi() {
     if (ftom == 1) {
         menuju();
     }
 }
-
 async function menuju() {
     window.location = "";
 }
-
 const body = document.querySelector("body");
 const swalst = Swal.mixin({
     timer: 2500,
@@ -181,16 +164,13 @@ const swals = Swal.mixin({
     imageHeight: 100,
 });
 audio = new Audio('' + linkmp3.src);
-
 function otomatis() {
     kalimatbawah.style = "position:relative;opacity:0;transform:scale(.3);";
     setTimeout(anim, 300);
 }
-
 function anim() {
     kalimatbawah.style = "position:relative;opacity:1;transform:scale(1);";
 }
-
 function berjatuhan() {
     const heart = document.createElement("div");
     heart.innerHTML = "<svg class='line spin' style='opacity:.5;z-index:100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g transform='translate(2.550170, 3.550158)'><path d='M0.371729633,8.89614246 C-0.701270367,5.54614246 0.553729633,1.38114246 4.07072963,0.249142462 C5.92072963,-0.347857538 8.20372963,0.150142462 9.50072963,1.93914246 C10.7237296,0.0841424625 13.0727296,-0.343857538 14.9207296,0.249142462 C18.4367296,1.38114246 19.6987296,5.54614246 18.6267296,8.89614246 C16.9567296,14.2061425 11.1297296,16.9721425 9.50072963,16.9721425 C7.87272963,16.9721425 2.09772963,14.2681425 0.371729633,8.89614246 Z'></path><path d='M13.23843,4.013842 C14.44543,4.137842 15.20043,5.094842 15.15543,6.435842'></path></g></svg>";
@@ -199,14 +179,51 @@ function berjatuhan() {
     heart.style.animationDuration = (Math.random() * 3) + 2 + "s";
     document.body.appendChild(heart);
 }
-
 setInterval(function () {
     var heartArr = document.querySelectorAll(".heart-icon");
     if (heartArr.length > 100) {
         heartArr[0].remove();
     }
 }, 100);
-
 document.getElementById('suratin').addEventListener('click', function() {
     document.getElementById('giftMessage').style.display = 'none';
     });
+    function updateElapsedTime() {
+        const startDate = new Date("2024-08-17T00:00:00");
+        const now = new Date();
+        const diff = now - startDate;
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+    
+        document.getElementById("time-elapsed").innerText = 
+            `We're already together for: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+    }
+    setInterval(updateElapsedTime, 1000);
+    updateElapsedTime();
+    setTimeout(() => {
+        document.getElementById("time-elapsed").classList.add("show");
+    }, 500);
+function mulaiTimer() {
+    document.getElementById("timer-container").style.display = "block";
+    setInterval(updateTimer, 1000);
+    updateTimer();
+}
+function tombol() {
+    ftom = 1;
+    document.getElementById("textbox").style.display = "block";
+    setTimeout(mulaiTimer, 1500);
+}
+function mulaiketik2() {
+    if (aaa < kal2.length) {
+        kalimat2.innerHTML += kal2.charAt(aaa);
+        aaa++;
+        setTimeout(mulaiketik2, 180);
+    }
+    if (aaa == kal2.length) {
+        setInterval(berjatuhan, 800);
+        setTimeout(munculbwh, 1000);
+        setTimeout(tombol, 1500);
+    }
+}
